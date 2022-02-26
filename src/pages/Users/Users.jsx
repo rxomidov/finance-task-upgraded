@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Input, Select, Space } from "antd";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FileAddOutlined, ReloadOutlined } from "@ant-design/icons/lib";
 import { motion } from "framer-motion";
@@ -18,6 +18,7 @@ const { Option } = Select;
 const Users = () => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const location = useLocation();
 
     let userListFilter = useSelector((state) => state.userList.filterData);
 

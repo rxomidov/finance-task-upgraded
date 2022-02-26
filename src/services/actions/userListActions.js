@@ -7,6 +7,7 @@ import {
 } from "../constants/constants";
 
 export const getUserListStartAct = (data) => {
+  console.log(data);
   return {
       type: USER_LIST_START,
       payload: data,
@@ -14,7 +15,6 @@ export const getUserListStartAct = (data) => {
 };
 
 export const getUserListSuccess = (data) => {
-  console.log(data);
   return {
       type: USER_LIST_SUCCESS,
       payload: data,

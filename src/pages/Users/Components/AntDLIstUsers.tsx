@@ -15,6 +15,7 @@ import URL from "../../../services/api/config";
 import { ShowNotification } from "../../../containers/ShowNotification";
 import RoleModal from "./RoleModal/RoleModal";
 import { setUserListPagination } from "../_redux/usersSlice";
+import { getUserListStartAct } from "../../../services/actions/userListActions";
 
 interface ListUsers {
     listUsers: {
@@ -33,7 +34,7 @@ const AntDListUsers: React.FC<ListUsers> = ({ listUsers, count }) => {
     const loading = useSelector(
         (state: RootState) => state.userList?.userListBegin
     );
-    const paramsData = useSelector(
+    const paginationData = useSelector(
         (state: RootState) => state.userList?.paginationData
     );
 
@@ -133,8 +134,14 @@ const AntDListUsers: React.FC<ListUsers> = ({ listUsers, count }) => {
         console.log(page, pageSize);
         // paramsData.PageNumber = page;
         // paramsData.PageLimit = pageSize;
+        // dispatch(
+        //     setUserListPagination({
+        //         PageNumber: page,
+        //         PageLimit: pageSize,
+        //     })
+        // );
         dispatch(
-            setUserListPagination({
+            getUserListStartAct({
                 PageNumber: page,
                 PageLimit: pageSize,
             })

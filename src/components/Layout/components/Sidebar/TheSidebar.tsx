@@ -34,7 +34,7 @@ const TheSidebar = ({collapsed, onCollapse}: any) => {
         if (location.pathname === "/users") {
             dispatch(getUserListStartAct(userListPagination));
         }
-    }, [dispatch, userListPagination]);
+    }, [dispatch, location.pathname,userListPagination]); //not correct
 
     const getBank = () => {
         dispatch(setFilterParams({
