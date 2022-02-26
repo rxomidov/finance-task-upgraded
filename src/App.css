@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+:root {
+  --text-color: #262628;
+  --text-color-secondary: #ffffff;
+
+  --background-color: rgba(35, 54, 154, 0.7);
+
+  --main-transition: 0.3s ease-in-out;
+}
+
+.ant-btn-primary, .ant-btn-default{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ant-modal-footer {
+  display: flex;
+}
+.ant-modal-footer{
+  justify-content: end;
+}
+.ant-popover-buttons{
+  display: flex;
+}
